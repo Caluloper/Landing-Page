@@ -1,13 +1,580 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>landing-page</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Ecclesiacloud es un sistema de gestión sacramental para iglesias católicas. Gestiona bautismos, confirmaciones, matrimonios y más de forma segura y eficiente." />
+        <meta name="author" content="Ecclesiacloud" />
+
+        <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+        <meta property="og:site_name" content="" /> <!-- website name -->
+        <meta property="og:site" content="" /> <!-- website link -->
+        <meta property="og:title" content="" /> <!-- title shown in the actual shared post -->
+        <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+        <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+        <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+        <meta name="twitter:card" content="summary_large_image" /> <!-- to have large image post format in Twitter -->
+
+        <!-- Webpage Title -->
+        <title>Ecclesiacloud - Sistema de Gestión Sacramental</title>
+
+        <!-- Styles -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+        <link href="css/fontawesome-all.css" rel="stylesheet" />
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+        <link href="css/swiper.css" rel="stylesheet" />
+        <link href="css/magnific-popup.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+
+        <!-- Favicon  -->
+        <link rel="icon" href="images/ECC Logo.png" />
+    </head>
+    <body data-spy="scroll" data-target=".fixed-top">
+
+        <!-- Navigation -->
+        <nav class="navbar fixed-top">
+            <div class="container sm:px-4 lg:px-8 flex flex-wrap items-center justify-between lg:flex-nowrap">
+                
+                <!-- Text Logo - Use this if you don't have a graphic logo -->
+                <!-- <a class="text-gray-800 font-semibold text-3xl leading-4 no-underline page-scroll" href="index.html">Ecclesiacloud</a> -->
+
+                <!-- Image Logo -->
+                <a class="inline-block mr-4 py-0.5 text-xl whitespace-nowrap hover:no-underline focus:no-underline" href="index.html">
+                    <img src="images/ECC Logo.png" alt="Ecclesiacloud" class="h-12" style="max-height:64px;" />
+                </a>
+
+                <button class="background-transparent rounded text-xl leading-none hover:no-underline focus:no-underline lg:hidden lg:text-gray-400" type="button" data-toggle="offcanvas">
+                    <span class="navbar-toggler-icon inline-block w-8 h-8 align-middle"></span>
+                </button>
+
+                <div class="navbar-collapse offcanvas-collapse lg:flex lg:flex-grow lg:items-center" id="navbarsExampleDefault">
+                    <ul class="pl-0 mt-3 mb-2 ml-auto flex flex-col list-none lg:mt-0 lg:mb-0 lg:flex-row">
+                        <li>
+                            <a class="nav-link page-scroll active" href="#header">Inicio <span class="sr-only">(actual)</span></a>
+                        </li>
+                        <li>
+                            <a class="nav-link page-scroll" href="#features">Características</a>
+                        </li>
+                        <li>
+                            <a class="nav-link page-scroll" href="#details">Detalles</a>
+                        </li>
+                        <li>
+                            <a class="nav-link page-scroll" href="#pricing">Planes</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Más</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                                <a class="dropdown-item page-scroll" href="article.html">Información Técnica</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item page-scroll" href="terms.html">Términos y Condiciones</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item page-scroll" href="privacy.html">Política de Privacidad</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="nav-link page-scroll" href="#download">Empezar</a>
+                        </li>
+                    </ul>
+                    <span class="block lg:ml-3.5">
+                        <a class="no-underline" href="#your-link">
+                            <i class="fab fa-facebook text-indigo-600 hover:text-pink-500 text-xl transition-all duration-200 mr-1.5"></i>
+                        </a>
+                        <a class="no-underline" href="#your-link">
+                            <i class="fab fa-whatsapp text-indigo-600 hover:text-pink-500 text-xl transition-all duration-200"></i>
+                        </a>
+                    </span>
+                </div> <!-- end of navbar-collapse -->
+            </div> <!-- end of container -->
+        </nav> <!-- end of navbar -->
+        <!-- end of navigation -->
+
+        <!-- Header -->
+        <header id="header" class="header py-12 text-center md:pt-16 lg:text-left xl:py-24">
+            <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:items-center">
+                <div class="order-2 lg:order-1 mb-8 lg:mb-0">
+                    <h1 class="h1-large mb-5">Gestión Sacramental para tu Iglesia</h1>
+                    <p class="p-large mb-8">Ecclesiacloud simplifica la administración de sacramentos. Registro seguro, reportes automáticos y acceso desde cualquier lugar.</p>
+                    <a class="btn-solid-lg" href="#your-link"><i class="fab fa-apple"></i>Download</a>
+                    <a class="btn-solid-lg secondary" href="#your-link"><i class="fab fa-google-play"></i>Download</a>
+                </div>
+                <div class="order-1 lg:order-2 mb-8 lg:mb-0 lg:text-center">
+                    <img class="inline max-w-sm md:max-w-md lg:max-w-lg" src="images/ECC Cabecera.png" alt="Ecclesiacloud - vista" />
+                </div>
+            </div> <!-- end of container -->
+        </header> <!-- end of header -->
+        <!-- end of header -->
+
+
+        <!-- Introduction -->
+        <div class="py-12 text-center bg-gray">
+            <div class="container px-4 sm:px-8 xl:px-4">
+                <p class="mb-4 text-gray-800 text-2xl leading-8 lg:max-w-4xl lg:mx-auto font-semibold">La solución más completa para gestión sacramental en iglesias católicas</p>
+                <p class="text-gray-600 lg:max-w-3xl lg:mx-auto">Digitaliza tus procesos, reduce errores y ahorra tiempo administrativo</p>
+            </div> <!-- end of container -->
+        </div>
+        <!-- end of introduction -->
+
+
+        <!-- Features -->
+        <div id="features" class="cards-1 py-16">
+            <div class="container px-4 sm:px-8 xl:px-4">
+                <h2 class="text-center mb-12">Características Principales</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/features-icon-1.svg" alt="alternative" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Interfaz Intuitiva</h5>
+                            <p class="mb-4">Diseñada para uso administrativo fácil, sin necesidad de capacitación técnica compleja</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/features-icon-2.svg" alt="alternative" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Datos Seguros</h5>
+                            <p class="mb-4">Protección de datos con encriptación y cumplimiento de normativas de privacidad</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/features-icon-3.svg" alt="alternative" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Acceso en Nube</h5>
+                            <p class="mb-4">Accede desde cualquier dispositivo, en cualquier momento, sin instalaciones complicadas</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/features-icon-4.svg" alt="alternative" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Reportes Automáticos</h5>
+                            <p class="mb-4">Genera reportes de sacramentos, estadísticas y documentación oficial de forma automática</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/features-icon-5.svg" alt="alternative" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Soporte Continuo</h5>
+                            <p class="mb-4">Actualizaciones permanentes y soporte técnico disponible para tu iglesia</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/features-icon-6.svg" alt="alternative" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Gestión Completa</h5>
+                            <p class="mb-4">Administra bautismos, confirmaciones, matrimonios y otros sacramentos en un único sistema</p>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+                </div>
+            </div> <!-- end of container -->
+        </div> <!-- end of cards-1 -->
+        <!-- end of features -->
+
+
+        <!-- Details 1 -->
+        <div id="details" class="py-16 lg:py-20">
+            <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-2 lg:gap-x-12 lg:items-center">
+                <div class="mb-8 lg:mb-0 order-2 lg:order-1">
+                    <h2 class="mb-6">Administración Centralizada de Sacramentos</h2>
+                    <p class="mb-4">Ecclesiacloud centraliza toda la información sacramental de tu iglesia. Desde bautismos hasta matrimonios, todo en un único lugar seguro y accesible.</p>
+                    <p class="mb-4">Reduce la carga administrativa y dedica más tiempo a tu ministerio pastoral</p>
+                </div> <!-- end of col -->
+                <div class="order-1 lg:order-2 mb-8 lg:mb-0 lg:text-center">
+                    <img class="inline max-w-sm md:max-w-md" src="images/ECC VistaPrevia.png" alt="Vista previa Ecclesiacloud" />
+                </div> <!-- end of col -->
+            </div> <!-- end of container -->
+        </div>
+        <!-- end of details 1 -->
+
+
+        <!-- Details 2 -->
+        <div class="py-16 lg:py-20 bg-gray">
+            <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-2 lg:gap-x-12 lg:items-center">
+                <div class="mb-8 lg:mb-0 order-2 lg:order-1">
+                    <h2 class="mb-6">Reportes y Documentación Automática</h2>
+                    <ul class="list mb-7 space-y-2">
+                        <li class="flex">
+                            <i class="fas fa-chevron-right"></i>
+                            <div>Certificados de sacramentos generados automáticamente</div>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-chevron-right"></i>
+                            <div>Reportes estadísticos y análisis de datos</div>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-chevron-right"></i>
+                            <div>Integración con archivos diocesanos</div>
+                        </li>
+                    </ul>
+                    <a class="btn-solid-reg popup-with-move-anim mr-1.5" href="#details-lightbox">Ver Demo</a>
+                    <a class="btn-outline-reg" href="article.html">Más Información</a>
+                </div> <!-- end of col -->
+                <div class="order-1 lg:order-2 text-center">
+                    <img class="inline max-w-sm md:max-w-md" src="images/ECC NuevoRegistro(Campos).png" alt="Formulario de registro Ecclesiacloud" />
+                </div> <!-- end of col -->
+            </div> <!-- end of container -->
+        </div>
+        <!-- end of details 2 -->
+
+
+        <!-- Details Lightbox -->
+        <!-- Lightbox -->
+        <div id="details-lightbox" class="lightbox-basic zoom-anim-dialog mfp-hide">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-x-8">
+                <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+                <div class="lg:col-span-8">
+                    <div class="mb-12 text-center lg:mb-0 lg:text-left xl:mr-6">
+                        <img class="inline rounded-lg" src="images/ECC NuevoRegistro(IA).png" alt="Asistente IA - Ecclesiacloud" />
+                    </div>
+                </div> <!-- end of col -->
+                <div class="lg:col-span-4">
+                    <h3 class="mb-2">Goals Setting</h3>
+                    <hr class="w-11 h-0.5 mt-0.5 mb-4 ml-0 border-none bg-indigo-600" />
+                    <p>The app can easily help you track your personal development evolution if you take the time to set it up.</p>
+                    <h4 class="mt-7 mb-2.5">User Feedback</h4>
+                    <p class="mb-4">This is a great app which can help you save time and make your live easier. And it will help improve your productivity.</p>
+                    <ul class="list mb-6 space-y-2">
+                        <li class="flex">
+                            <i class="fas fa-chevron-right"></i>
+                            <div>Splash screen panel</div>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-chevron-right"></i>
+                            <div>Statistics graph report</div>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-chevron-right"></i>
+                            <div>Events calendar layout</div>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-chevron-right"></i>
+                            <div>Location details screen</div>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-chevron-right"></i>
+                            <div>Onboarding steps interface</div>
+                        </li>
+                    </ul>
+                    <a class="btn-solid-reg mfp-close page-scroll" href="#download">Download</a>
+                    <button class="btn-outline-reg mfp-close as-button" type="button">Back</button>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of lightbox-basic -->
+        <!-- end of lightbox -->
+        <!-- end of details lightbox -->
+
+
+        <!-- Details 3 -->
+        <div class="py-16 lg:py-20">
+            <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-2 lg:gap-x-12 lg:items-center">
+                <div class="mb-8 lg:mb-0 order-2 lg:order-1 text-center">
+                    <img class="inline max-w-sm md:max-w-md" src="images/ECC Registros.png" alt="Registros Ecclesiacloud" />
+                </div> <!-- end of col -->
+                <div class="order-1 lg:order-2 lg:mb-0">
+                    <h2 class="mb-6">Seguridad y Privacidad de Datos</h2>
+                    <p class="mb-4">La información sacramental está protegida con los máximos estándares de encriptación. Cumplimos con regulaciones de privacidad y confidencialidad requeridas por la Iglesia.</p>
+                    <p class="mb-4">Respaldos automáticos y recuperación ante desastres garantizan que tu información nunca se pierda</p>
+                </div> <!-- end of col -->
+            </div> <!-- end of container -->
+        </div>
+        <!-- end of details 3 -->
+
+
+        <!-- Statistics -->
+        <div class="counter py-16 lg:py-20 bg-gray">
+            <div class="container px-4 sm:px-8">
+                <h2 class="text-center mb-12">Por números</h2>
+                <!-- Counter -->
+                <div id="counter" class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
+                    <div class="cell text-center">
+                        <div class="counter-value number-count" data-count="850">1</div>
+                        <p class="counter-info text-sm">Iglesias</p>
+                    </div>
+                    <div class="cell text-center">
+                        <div class="counter-value number-count" data-count="125000">1</div>
+                        <p class="counter-info text-sm">Sacramentos</p>
+                    </div>
+                    <div class="cell text-center">
+                        <div class="counter-value number-count" data-count="4500">1</div>
+                        <p class="counter-info text-sm">Usuarios</p>
+                    </div>
+                    <div class="cell text-center">
+                        <div class="counter-value number-count" data-count="98">1</div>
+                        <p class="counter-info text-sm">Satisfacción</p>
+                    </div>
+                    <div class="cell text-center">
+                        <div class="counter-value number-count" data-count="2">1</div>
+                        <p class="counter-info text-sm">Años</p>
+                    </div>
+                </div>
+                <!-- end of counter -->
+
+            </div> <!-- end of container -->
+        </div> <!-- end of counter -->
+        <!-- end of statistics -->
+
+        <!-- Pricing -->
+        <div id="pricing" class="cards-2">
+            <div class="container px-4 pb-px sm:px-8">
+                <h2 class="mb-2.5 text-white lg:max-w-xl lg:mx-auto">Planes de Suscripción</h2>
+                <p class="mb-16 text-white lg:max-w-3xl lg:mx-auto">Elige el plan que mejor se adapte a las necesidades de tu iglesia</p>
+
+                <!-- Card-->
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">PLAN GRATUITO</div>
+                        <div class="price"><span class="currency">$</span><span class="value">0</span></div>
+                        <div class="frequency">mensual</div>
+                        <p>Perfecto para iglesias pequeñas que comienzan su digitalización</p>
+                        <ul class="list mb-7 space-y-2 text-left">
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Hasta 100 registros de sacramentos</div>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Reportes básicos</div>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Un usuario administrativo</div>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Soporte comunitario</div>
+                            </li>
+                        </ul>
+                        <div class="button-wrapper">
+                            <a class="btn-solid-reg page-scroll" href="#download">Comenzar Gratis</a>
+                        </div>
+                    </div>
+                </div> <!-- end of card -->
+                <!-- end of card -->
+
+                <!-- Card-->
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">PLAN IGLESIA</div>
+                        <div class="price"><span class="currency">$</span><span class="value">99</span></div>
+                        <div class="frequency">mensual</div>
+                        <p>Solución completa para iglesias medianas y comunidades parroquiales</p>
+                        <ul class="list mb-7 space-y-2 text-left">
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Registros ilimitados</div>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Reportes avanzados y certificados</div>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Hasta 5 usuarios administrativos</div>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Soporte prioritario 24/7</div>
+                            </li>
+                        </ul>
+                        <div class="button-wrapper">
+                            <a class="btn-solid-reg page-scroll" href="#download">Contratar Plan</a>
+                        </div>
+                    </div>
+                </div> <!-- end of card -->
+                <!-- end of card -->
+
+                <!-- Card-->
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">PLAN ARQUIDIÓCESIS</div>
+                        <div class="price"><span class="currency">$</span><span class="value">499</span></div>
+                        <div class="frequency">mensual</div>
+                        <p>Gestión integral para redes diocesanas y multiples parroquias</p>
+                        <ul class="list mb-7 text-left space-y-2">
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Múltiples sedes y secciones</div>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Reportes personalizados y análisis avanzado</div>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Usuarios administrativos ilimitados</div>
+                            </li>
+                            <li class="flex">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>Soporte técnico dedicado y capacitación</div>
+                            </li>
+                        </ul>
+                        <div class="button-wrapper">
+                            <a class="btn-solid-reg page-scroll" href="#download">Contactar Ventas</a>
+                        </div>
+                    </div>
+                </div> <!-- end of card -->
+                <!-- end of card -->
+
+            </div> <!-- end of container -->
+        </div> <!-- end of cards-2 -->
+        <!-- end of pricing -->
+
+        <!-- Registro (Formulario) -->
+        <div id="registro" class="py-16 bg-white">
+            <div class="container px-4 sm:px-8 lg:max-w-3xl lg:mx-auto">
+                <h2 class="text-center mb-6">Registro y Suscripción</h2>
+                <p class="mb-6 text-center text-gray-600">Regístrate para probar Ecclesiacloud. Usamos fetch POST/GET para demostrar comunicación HTTP.</p>
+                <form id="registroForm" class="space-y-4">
+                    <div>
+                        <label class="block mb-1 font-medium" for="name">Nombre completo</label>
+                        <input id="name" name="name" class="w-full border rounded px-3 py-2" type="text" placeholder="Tu nombre" required />
+                    </div>
+                    <div>
+                        <label class="block mb-1 font-medium" for="email">Correo electrónico</label>
+                        <input id="email" name="email" class="w-full border rounded px-3 py-2" type="email" placeholder="tu@correo.com" required />
+                    </div>
+                    <div>
+                        <label class="block mb-1 font-medium" for="parish">Parroquia / Sede</label>
+                        <select id="parish" name="parish" class="w-full border rounded px-3 py-2">
+                            <option value="Parroquia San José">Parroquia San José</option>
+                            <option value="Parroquia Santa María">Parroquia Santa María</option>
+                            <option value="Otra">Otra</option>
+                        </select>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <button id="submitRegistro" type="submit" class="btn-solid-lg">Enviar Registro</button>
+                        <button id="loadRemote" type="button" class="btn-outline-reg">Cargar registros de ejemplo (GET)</button>
+                        <button id="clearRecords" type="button" class="btn-outline-reg">Limpiar registros</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- end of registro -->
+
+        <!-- Registros (Interacción) -->
+        <div id="registros" class="py-12 bg-gray">
+            <div class="container px-4 sm:px-8 lg:max-w-3xl lg:mx-auto">
+                <h2 class="text-center mb-6">Registros Enviados</h2>
+                <p class="mb-4 text-center text-gray-600">Aquí verás los datos que enviaste y los registros cargados desde una API de ejemplo.</p>
+                <div id="datosList" class="space-y-4">
+                    <!-- registros enviados se mostrarán aquí -->
+                </div>
+            </div>
+        </div>
+        <!-- end of registros -->
+
+
+        <!-- Conclusion -->
+        <div id="download" class="basic-5 py-20 lg:py-28">
+            <div class="container px-4 sm:px-8">
+                <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 lg:items-center">
+                    <div class="order-2 lg:order-1">
+                        <img src="images/ECC Nube.png" alt="Ecclesiacloud en la nube" />
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <p class="mb-9 text-gray-800 text-3xl leading-10">Comienza a digitalizar tu iglesia hoy mismo. Ecclesiacloud te acompaña en cada paso.</p>
+                        <a class="btn-solid-lg" href="#your-link">Prueba Gratis</a>
+                        <a class="btn-solid-lg secondary" href="#your-link">Contactar Ventas</a>
+                    </div>
+                </div>
+            </div> <!-- end of container -->
+        </div> <!-- end of basic-5 -->
+        <!-- end of conclusion -->
+
+
+        <!-- Footer -->
+        <div class="footer py-16">
+            <div class="container px-4 sm:px-8">
+                <h4 class="mb-8 lg:max-w-3xl lg:mx-auto">Ecclesiacloud es la solución integral para gestión sacramental. Contáctanos en <a class="text-indigo-600 hover:text-gray-500" href="mailto:info@ecclesiacloud.com">info@ecclesiacloud.com</a></h4>
+                <div class="social-container">
+                    <span class="fa-stack">
+                        <a href="#your-link">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-facebook-f fa-stack-1x"></i>
+                        </a>
+                    </span>
+                    <span class="fa-stack">
+                        <a href="#your-link">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-twitter fa-stack-1x"></i>
+                        </a>
+                    </span>
+                    <span class="fa-stack">
+                        <a href="#your-link">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-pinterest-p fa-stack-1x"></i>
+                        </a>
+                    </span>
+                    <span class="fa-stack">
+                        <a href="#your-link">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-instagram fa-stack-1x"></i>
+                        </a>
+                    </span>
+                    <span class="fa-stack">
+                        <a href="#your-link">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-youtube fa-stack-1x"></i>
+                        </a>
+                    </span>
+                </div> <!-- end of social-container -->
+            </div> <!-- end of container -->
+        </div> <!-- end of footer -->
+        <!-- end of footer -->
+
+
+        <!-- Copyright -->
+        <div class="copyright py-8">
+            <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-3">
+                <ul class="mb-4 list-unstyled p-small">
+                    <li class="mb-2"><a href="article.html">Información Técnica</a></li>
+                    <li class="mb-2"><a href="terms.html">Términos y Condiciones</a></li>
+                    <li class="mb-2"><a href="privacy.html">Política de Privacidad</a></li>
+                </ul>
+                <p class="pb-2 p-small statement">Copyright © <a href="#your-link" class="no-underline">Ecclesiacloud</a></p>
+
+                <p class="pb-2 p-small statement">Solución Integral para Iglesias Católicas</p>
+            </div> 
+
+        <!-- end of container -->
+        </div> <!-- end of copyright -->
+        <!-- end of copyright -->
+
+
+        <!-- Scripts -->
+        <script src="js/jquery.min.js"></script> <!-- jQuery for JavaScript plugins -->
+        <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+        <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+        <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+        <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    </body>
 </html>
